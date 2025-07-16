@@ -13,3 +13,7 @@ vim.opt.incsearch = true
 vim.diagnostic.enable()
 vim.diagnostic.config({virtual_text = true, signs = true, underline = true})
 vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
